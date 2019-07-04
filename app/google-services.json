@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "437575680116",
+    "firebase_url": "https://masterjee-d5ab5.firebaseio.com",
+    "project_id": "masterjee-d5ab5",
+    "storage_bucket": "masterjee-d5ab5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437575680116:android:04791cbdd899d4aa",
+        "android_client_info": {
+          "package_name": "com.img.masterjee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437575680116-ek9656vcjle45a11abihfffc2ahrlh7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.img.masterjee",
+            "certificate_hash": "9b3eb7f1cfc9815e75d62bde49f9ed892bd49039"
+          }
+        },
+        {
+          "client_id": "437575680116-jdvvi35ch3t2b23eqohq7ng1kua7d6pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR8UOvjdPLWFdb-NHe6oMa4G4fOFa25pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437575680116-jdvvi35ch3t2b23eqohq7ng1kua7d6pq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
