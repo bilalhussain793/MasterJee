@@ -46,35 +46,35 @@ imageSwitcher=findViewById(R.id.slide_trans_imageswitcher);
 
 
 
-        Animation in  = AnimationUtils.loadAnimation(this, R.anim.left_to_right_in);
-        Animation out = AnimationUtils.loadAnimation(this, R.anim.left_to_right_out);
+//        Animation in  = AnimationUtils.loadAnimation(this, R.anim.left_to_right_in);
+//        Animation out = AnimationUtils.loadAnimation(this, R.anim.left_to_right_out);
+//
+//
+//        imageSwitcher.setInAnimation(in);
+//       imageSwitcher.setOutAnimation(out);
 
 
-        imageSwitcher.setInAnimation(in);
-       imageSwitcher.setOutAnimation(out);
-
-
-        imageSwitcherHandler = new Handler(Looper.getMainLooper());
-        imageSwitcherHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                switch (animationCounter++) {
-                    case 1:
-                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-                        break;
-                    case 2:
-                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-                        break;
-                    case 3:
-                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-                        break;
-                }
-                animationCounter %= 4;
-                if(animationCounter == 0 ) animationCounter = 1;
-
-                imageSwitcherHandler.postDelayed(this, 2000);
-            }
-        });
+//        imageSwitcherHandler = new Handler(Looper.getMainLooper());
+//        imageSwitcherHandler.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                switch (animationCounter++) {
+//                    case 1:
+//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
+//                        break;
+//                    case 2:
+//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
+//                        break;
+//                    case 3:
+//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
+//                        break;
+//                }
+//                animationCounter %= 4;
+//                if(animationCounter == 0 ) animationCounter = 1;
+//
+//                imageSwitcherHandler.postDelayed(this, 2000);
+//            }
+//        });
 
 
 

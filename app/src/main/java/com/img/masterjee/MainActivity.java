@@ -64,23 +64,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (r == 2) {
-            startActivity(new Intent(new Intent(MainActivity.this,DashBoard.class)));
-            finish();
+            String a=prefs.getString("acc type",null);
+
+            if(a.length()==0){
+
+            }
+            else if (a.equals("Tailor")) {
+
+                startActivity(new Intent(MainActivity.this, tailordash.class));
+            }
+            else if(a.equals("User"))
+            {
+                startActivity(new Intent(MainActivity.this, DashBoard.class));
+                pd.dismiss();
+            }
         }else{
             Toast.makeText(this, "Login here", Toast.LENGTH_SHORT).show();
         }
-        String a=prefs.getString("acc type",null);
 
-
-        if (a.equals("Tailor")) {
-
-            startActivity(new Intent(MainActivity.this, tailordash.class));
-        }
-        if(a.equals("User"))
-        {
-            startActivity(new Intent(MainActivity.this, DashBoard.class));
-            pd.dismiss();
-        }
 
 
 
