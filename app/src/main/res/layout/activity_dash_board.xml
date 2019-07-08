@@ -196,6 +196,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:orientation="vertical"
