@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".orderactvity"></activity>
+        <activity android:name=".UnStich"></activity>
+        <activity android:name=".Kids" />
+        <activity android:name=".Women" />
+        <activity android:name=".orderactvity" />
         <activity android:name=".Men" />
         <activity android:name=".design" />
         <activity android:name=".tailordash" />

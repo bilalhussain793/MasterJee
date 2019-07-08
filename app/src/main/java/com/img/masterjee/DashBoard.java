@@ -67,12 +67,12 @@ startActivity(new Intent(DashBoard.this,Men.class));
         women.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(DashBoard.this,Women.class));
             }
         }); kid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(DashBoard.this,Kids.class));
             }
         }); ready.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,19 +109,6 @@ startActivity(new Intent(DashBoard.this,Men.class));
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         final SharedPreferences.Editor editor = getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
