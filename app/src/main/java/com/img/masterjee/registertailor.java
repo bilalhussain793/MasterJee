@@ -153,7 +153,7 @@ public class registertailor extends AppCompatActivity {
                                                     myRef.child("Refer To").setValue(rf);
                                                     uploadImage();
                                                     pd.dismiss();
-                                                    finish();
+
 
                                                     startActivity(new Intent(registertailor.this,MainActivity.class));
 
@@ -225,7 +225,7 @@ public class registertailor extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             progressDialog.dismiss();
-                            Toast.makeText(registertailor.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(registertailor.this, "Uploaded", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -240,7 +240,7 @@ public class registertailor extends AppCompatActivity {
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                             double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
                                     .getTotalByteCount());
-                            progressDialog.setMessage("Uploaded "+(int)progress+"%");
+                           // progressDialog.setMessage("Uploaded "+(int)progress+"%");
                         }
                     });
         }
