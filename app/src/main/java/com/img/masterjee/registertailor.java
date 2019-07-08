@@ -159,7 +159,6 @@ public class registertailor extends AppCompatActivity {
 
 
 
-
                                                 }
                                             }
                                         }

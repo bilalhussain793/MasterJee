@@ -8,125 +8,125 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center">
+  <ImageView
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/person"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+      android:paddingRight="10dp"
+      android:background="@drawable/txt_canvas"
+      android:gravity="center">
+
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/person"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingRight="10dp"
-        android:background="@drawable/txt_canvas"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/pnn"
-            android:padding="3dp"
-            android:layout_marginLeft="5dp"
-            android:tint="@color/button"/>
-
-
-
-            <EditText
-                android:id="@+id/et_phone_login"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/button"
-                android:hint="Contact #"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="5dp"
-
-                android:inputType="phone"
-                android:maxLength="13"
-                android:maxLines="1"
-                android:background="#00000000"
-                android:singleLine="true"
-                android:textSize="13dp" />
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:layout_marginTop="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingRight="10dp"
-        android:background="@drawable/txt_canvas"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/pss"
-            android:padding="3dp"
-            android:layout_marginLeft="5dp"
-            android:tint="@color/button"/>
-
-
-
-            <EditText
-                android:id="@+id/et_pass_login"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/button"
-                android:hint="Password"
-                android:layout_marginLeft="5dp"
-
-                android:layout_gravity="bottom"
-                android:inputType="textPassword"
-                android:maxLength="15"
-                android:maxLines="1"
-                android:background="#00000000"
-                android:singleLine="true"
-                android:textSize="13dp" />
-
-
-
-    </LinearLayout>
-
-
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:text="Keep me signed in..."
-        android:buttonTint="@color/button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/pnn"
+        android:padding="3dp"
         android:layout_marginLeft="5dp"
-        android:id="@+id/cbx"
-        android:textColor="@color/button"/>
+        android:tint="@color/button"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="88dp"
-        android:background="@color/button"
-        android:text="Login"
-        android:id="@+id/bt_login"
-        android:padding="5dp"
-        android:textAllCaps="false"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/button"
-        android:textStyle="bold|normal"
-        android:id="@+id/tv_reg"
-        android:text="Not have an account ?\n------------------\nRegister here"/>
+
+    <EditText
+        android:id="@+id/et_phone_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/button"
+        android:hint="Contact #"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+
+        android:inputType="phone"
+        android:maxLength="13"
+        android:maxLines="1"
+        android:background="#00000000"
+        android:singleLine="true"
+        android:textSize="13dp" />
+
+
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:gravity="center"
+      android:layout_marginTop="5dp"
+      android:paddingTop="5dp"
+      android:paddingBottom="5dp"
+      android:paddingRight="10dp"
+      android:background="@drawable/txt_canvas"
+      android:orientation="horizontal">
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/pss"
+        android:padding="3dp"
+        android:layout_marginLeft="5dp"
+        android:tint="@color/button"/>
+
+
+
+    <EditText
+        android:id="@+id/et_pass_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/button"
+        android:hint="Password"
+        android:layout_marginLeft="5dp"
+
+        android:layout_gravity="bottom"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:background="#00000000"
+        android:singleLine="true"
+        android:textSize="13dp" />
+
+
+
+  </LinearLayout>
+
+
+
+  <CheckBox
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left"
+      android:text="Keep me signed in..."
+      android:buttonTint="@color/button"
+      android:layout_marginLeft="5dp"
+      android:id="@+id/cbx"
+      android:textColor="@color/button"/>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="88dp"
+      android:background="@color/button"
+      android:text="Login"
+      android:id="@+id/bt_login"
+      android:padding="5dp"
+      android:textAllCaps="false"
+      android:textColor="@android:color/background_light"
+      android:textSize="20sp"
+      android:textStyle="bold" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textColor="@color/button"
+      android:textStyle="bold|normal"
+      android:id="@+id/tv_reg"
+      android:text="Not have an account ?\n------------------\nRegister here"/>
 
 
 </LinearLayout>

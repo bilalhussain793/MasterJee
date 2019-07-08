@@ -29,6 +29,10 @@ Button logout_btn;
 ImageView imv;
 TextView nam,phon;
 String userphone;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    Button men,women,kid,ready,unstich
+        ,history,contactus,size,about;
     private int animationCounter = 1;
     private Handler imageSwitcherHandler;
     ImageSwitcher imageSwitcher;
@@ -42,43 +46,80 @@ String userphone;
         imv=findViewById(R.id.imv);
         nam=findViewById(R.id.name1);
         phon=findViewById(R.id.phone1);
-imageSwitcher=findViewById(R.id.slide_trans_imageswitcher);
+
+        men=findViewById(R.id.men);
+        women=findViewById(R.id.women);
+        kid=findViewById(R.id.kid);
+        ready=findViewById(R.id.ready);
+        unstich=findViewById(R.id.unstich);
+        history=findViewById(R.id.his);
+        contactus=findViewById(R.id.cnt);
+        size=findViewById(R.id.sze);
+        about=findViewById(R.id.abt);
+
+
+        men.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+startActivity(new Intent(DashBoard.this,Men.class));
+            }
+        });
+        women.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); kid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); ready.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); unstich.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        }); contactus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        size.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
 
 
-//        Animation in  = AnimationUtils.loadAnimation(this, R.anim.left_to_right_in);
-//        Animation out = AnimationUtils.loadAnimation(this, R.anim.left_to_right_out);
-//
-//
-//        imageSwitcher.setInAnimation(in);
-//       imageSwitcher.setOutAnimation(out);
-
-
-//        imageSwitcherHandler = new Handler(Looper.getMainLooper());
-//        imageSwitcherHandler.post(new Runnable() {
-//            @Override
-//            public void run() {
-//                switch (animationCounter++) {
-//                    case 1:
-//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-//                        break;
-//                    case 2:
-//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-//                        break;
-//                    case 3:
-//                        imageSwitcher.setImageResource(R.drawable.ic_launcher_background);
-//                        break;
-//                }
-//                animationCounter %= 4;
-//                if(animationCounter == 0 ) animationCounter = 1;
-//
-//                imageSwitcherHandler.postDelayed(this, 2000);
-//            }
-//        });
 
 
 
-        imageSwitcher = (ImageSwitcher)findViewById(R.id.slide_trans_imageswitcher);
+
+
+
+
+
 
 
 
@@ -106,7 +147,6 @@ imageSwitcher=findViewById(R.id.slide_trans_imageswitcher);
 
         String a=prefs.getString("phone",null);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/"+a);
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

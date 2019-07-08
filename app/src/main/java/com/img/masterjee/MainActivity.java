@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
         int r = prefs.getInt("flg", 0);
-
+        String na=prefs.getString("phone",null);
+        usern.username=na;
 
         if (r == 2) {
             String a=prefs.getString("acc type",null);
@@ -124,6 +125,7 @@ startActivity(new Intent(MainActivity.this,reguser.class));
                                 SharedPreferences.Editor editor = getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
                                 editor.putInt("flg", 2);
                                 editor.putString("phone", et_pn.getText().toString());
+
                                 editor.putString("acc type",type);
                                 editor.apply();
 
