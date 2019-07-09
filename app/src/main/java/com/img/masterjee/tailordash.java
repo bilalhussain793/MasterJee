@@ -32,7 +32,7 @@ public class tailordash extends AppCompatActivity {
     String userphone;
     TextView nam,phon,ttp;
 
-    TextView phn_order,design_order;
+    TextView phn_order,design_order,pprice,width1,length1;
     Button order,myord;
 
     ListView lv;
@@ -41,6 +41,7 @@ public class tailordash extends AppCompatActivity {
     Firebase firebase;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 Firebase fb;
+String a,b;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,9 @@ myord=findViewById(R.id.Myorder);
         phn_order=findViewById(R.id.phnorder);
         design_order=findViewById(R.id.designorder);
         order=findViewById(R.id.accept);
+        pprice=findViewById(R.id.pppp);
+        width1=findViewById(R.id.wit1);
+        length1=findViewById(R.id.len1);
 
 
 
@@ -137,9 +141,15 @@ myord=findViewById(R.id.Myorder);
                         // This method is called once with the initial value and again
                         // whenever data at this location is updated.
                         String ds = dataSnapshot.child("Design1").getValue(String.class);
+                        String o = dataSnapshot.child("Total").getValue(String.class);
+                        String l = dataSnapshot.child("Width").getValue(String.class);
 
+                        String w = dataSnapshot.child("Length").getValue(String.class);
 
                         design_order.setText(ds);
+                        pprice.setText(o);
+                       width1.setText(l);
+                       length1.setText(w);
 
 
                     }
@@ -165,7 +175,9 @@ myord=findViewById(R.id.Myorder);
                 DatabaseReference ordref = database.getReference("orders/" +a);
                 ordref.child("phn").setValue(b);
                 ordref.child("design").setValue(aa);
-
+                ordref.child("Width").setValue(width1.getText().toString());
+                ordref.child("Length").setValue(length1.getText().toString());
+                ordref.child("Total").setValue(pprice.getText().toString());
 
 
 
@@ -210,6 +222,7 @@ myord=findViewById(R.id.Myorder);
 
 
         DatabaseReference myRef = database.getReference("users/"+a);
+
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

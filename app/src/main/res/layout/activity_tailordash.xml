@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/back"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".tailordash">
@@ -10,7 +11,7 @@
 
 
     <LinearLayout
-        android:background="#BEB8B8"
+       android:background="@drawable/back"
 
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -60,7 +61,7 @@
         </LinearLayout>
         <Button
 
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="90dp"
             android:id="@+id/logout"
             android:layout_width="30dp"
             android:layout_height="34dp"
@@ -98,27 +99,74 @@ android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+        android:background="@drawable/button_disabled"
         android:hint="00000000000"
         android:id="@+id/phnorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
+
         android:layout_marginLeft="20dp"
         android:text="Design:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
 android:id="@+id/designorder"
+      android:background="@drawable/button_disabled"
+
         android:hint="Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:text="Total Price:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:hint="0"
+        android:background="@drawable/button_disabled"
+        android:id="@+id/pppp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Widht:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@drawable/button_disabled"
+            android:hint="0"
+            android:id="@+id/wit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:layout_marginLeft="20dp"
+            android:text="Lenght:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/len1"
+            android:background="@drawable/button_disabled"
+
+            android:hint="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 <Button
+    android:background="@drawable/button_rect"
     android:id="@+id/accept"
     android:text="Accept order"
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
     <Button
+        android:background="@drawable/button_rect"
         android:layout_marginTop="20dp"
         android:id="@+id/Myorder"
         android:text="My order"
