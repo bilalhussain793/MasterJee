@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class orderactvity extends AppCompatActivity {
-TextView design,phon,total,w,h;
+TextView design,phon,total,w,h,shldndr,szendr;
 ImageView im;
 
 Button btaa;
@@ -37,6 +37,8 @@ Button btn;
         h=findViewById(R.id.lengt);
         btaa=findViewById(R.id.click);
 
+        shldndr=findViewById(R.id.shhhhh);
+        szendr=findViewById(R.id.siiiiii);
 
         SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
         userphone = prefs.getString("phone", null);
@@ -54,13 +56,16 @@ Button btn;
                 String tot = dataSnapshot.child("Total").getValue(String.class);
                 String wid = dataSnapshot.child("Width").getValue(String.class);
                 String len = dataSnapshot.child("Length").getValue(String.class);
-
+                String sio = dataSnapshot.child("Size").getValue(String.class);
+                String sho = dataSnapshot.child("Shoulder").getValue(String.class);
 
                 phon.setText(ph);
                 design.setText(us);
                 total.setText(tot);
                 w.setText(wid);
                 h.setText(len);
+                szendr.setText(sio);
+                shldndr.setText(sho);
 
 
 

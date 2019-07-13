@@ -29,8 +29,8 @@ import java.util.ArrayList;
 public class tailordash extends AppCompatActivity {
     Button logout_btn;
     ImageView imv;
-    String userphone;
-    TextView nam,phon,ttp;
+    String userphone,sizeofshirt,shoulderofshirt;
+    TextView nam,phon,ttp,shlder,sized;
 
     TextView phn_order,design_order,pprice,width1,length1;
     Button order,myord;
@@ -48,7 +48,9 @@ String a,b;
         setContentView(R.layout.activity_tailordash);
         logout_btn=findViewById(R.id.logout);
 
-myord=findViewById(R.id.Myorder);
+        shlder=findViewById(R.id.Sholdert);
+        sized=findViewById(R.id.Sizet);
+        myord=findViewById(R.id.Myorder);
         imv=findViewById(R.id.imv);
         nam=findViewById(R.id.name1);
         phon=findViewById(R.id.phone1);
@@ -143,13 +145,16 @@ myord=findViewById(R.id.Myorder);
                         String ds = dataSnapshot.child("Design1").getValue(String.class);
                         String o = dataSnapshot.child("Total").getValue(String.class);
                         String l = dataSnapshot.child("Width").getValue(String.class);
-
                         String w = dataSnapshot.child("Length").getValue(String.class);
+                        String si = dataSnapshot.child("Size").getValue(String.class);
+                        String sh = dataSnapshot.child("Shoulder").getValue(String.class);
 
                         design_order.setText(ds);
                         pprice.setText(o);
                        width1.setText(l);
                        length1.setText(w);
+                       shlder.setText(sh);
+                       sized.setText(si);
 
 
                     }
@@ -171,7 +176,7 @@ myord=findViewById(R.id.Myorder);
             @Override
             public void onClick(View view) {
                String aa= design_order.getText().toString();
-             String b=   phn_order.getText().toString();
+               String b=   phn_order.getText().toString();
                 DatabaseReference ordref = database.getReference("orders/" +a);
                 ordref.child("phn").setValue(b);
                 ordref.child("design").setValue(aa);
@@ -186,6 +191,8 @@ myord=findViewById(R.id.Myorder);
 
             }
         });
+
+
 
 
 
@@ -229,7 +236,7 @@ myord=findViewById(R.id.Myorder);
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String phn = dataSnapshot.child("Phone").getValue(String.class);
-                String us = dataSnapshot.child("Name").getValue(String.class);
+                String us = dataSnapshot.child("tailor").getValue(String.class);
 
                 nam.setText(us);
                 phon.setText(phn);

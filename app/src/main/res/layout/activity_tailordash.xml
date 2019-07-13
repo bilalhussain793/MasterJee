@@ -91,6 +91,7 @@ android:layout_gravity="center"
 
 </ListView>
 <LinearLayout
+
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -118,24 +119,15 @@ android:id="@+id/designorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_marginLeft="20dp"
-        android:text="Total Price:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:hint="0"
-        android:background="@drawable/button_disabled"
-        android:id="@+id/pppp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 </LinearLayout>
     <LinearLayout
+
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Widht:"
+            android:text="Waist:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
@@ -158,7 +150,58 @@ android:id="@+id/designorder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
+
+
+
+        <TextView
+
+            android:layout_marginLeft="20dp"
+            android:text="Shoulder:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/Sholdert"
+            android:background="@drawable/button_disabled"
+
+            android:hint="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_marginLeft="20dp"
+            android:text="Size:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/Sizet"
+            android:background="@drawable/button_disabled"
+
+            android:hint="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:text="Total Price:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:hint="0"
+            android:background="@drawable/button_disabled"
+            android:id="@+id/pppp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 <Button
     android:background="@drawable/button_rect"
     android:id="@+id/accept"

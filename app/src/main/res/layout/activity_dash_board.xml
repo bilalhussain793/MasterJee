@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/back"
     tools:context=".DashBoard">
 
@@ -53,11 +52,13 @@
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:textColor="#fff"
                     android:hint="Name"
                     android:id="@+id/name1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:textColor="#fff"
                     android:id="@+id/phone1"
                     android:hint="Phone"
                     android:layout_width="wrap_content"
@@ -115,6 +116,7 @@
                     android:layout_height="60dp" />
 
                 <TextView
+                    android:textColor="#fff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -132,6 +134,7 @@
                     android:layout_height="60dp" />
 
                 <TextView
+                    android:textColor="#fff"
                     android:layout_marginLeft="15dp"
                     android:text="Women"
                     android:layout_width="wrap_content"
@@ -149,6 +152,7 @@
                     android:layout_height="60dp" />
 
                 <TextView
+                    android:textColor="#fff"
                     android:layout_marginLeft="20dp"
                     android:text="Kids"
                     android:layout_width="wrap_content"

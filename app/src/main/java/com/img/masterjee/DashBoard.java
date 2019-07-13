@@ -88,11 +88,15 @@ startActivity(new Intent(DashBoard.this,Men.class));
             @Override
             public void onClick(View view) {
 
+startActivity(new Intent(DashBoard.this,History.class));
+
+
+
             }
         }); contactus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(DashBoard.this, "Semester Project", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -100,13 +104,13 @@ startActivity(new Intent(DashBoard.this,Men.class));
         size.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(DashBoard.this, "Measurments", Toast.LENGTH_SHORT).show();
             }
         });
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(DashBoard.this, "This app is about Clothe designs", Toast.LENGTH_SHORT).show();
             }
         });
 

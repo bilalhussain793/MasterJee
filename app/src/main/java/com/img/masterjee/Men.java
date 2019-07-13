@@ -16,12 +16,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Men extends AppCompatActivity {
 Button bt1,bt2,bt3,bt4,bt5,place,confirm;
 TextView selet,tot,cu;
-EditText et,lent,wid;
+EditText et,lent,wid,siz,shou;
 
 int s=0;
 int r=0;
 LinearLayout ln;
-String Length,Width;
+String Length,Width,siz1,shou1 ;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,14 @@ wid=findViewById(R.id.width);
 confirm=findViewById(R.id.ok);
 ln=findViewById(R.id.layout);
 cu=findViewById(R.id.current);
+
+
+siz=findViewById(R.id.size);
+shou=findViewById(R.id.sholder);
+
+
+
+
 ln.setVisibility(View.GONE);
         final SharedPreferences.Editor editor = getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
         SharedPreferences prefs = getSharedPreferences("LOGIN", MODE_PRIVATE);
@@ -116,6 +124,8 @@ ln.setVisibility(View.GONE);
         bt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 myRef2.child("Design5").setValue("Design5");
                 cu.setText("7000");
                 r=s+(Integer.parseInt(cu.getText().toString()));
@@ -132,7 +142,7 @@ ln.setVisibility(View.GONE);
         place.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-String pno=et.getText().toString();
+        String pno=et.getText().toString();
                 if(pno.length()==0){
                     et.setError("Empty!");
                 }else {
@@ -140,6 +150,7 @@ String pno=et.getText().toString();
 
 
                     myRef2.child("Payout").setValue(pno);
+
 
                     Toast.makeText(Men.this, "Order placed", Toast.LENGTH_SHORT).show();
                     et.setText("");
@@ -160,12 +171,18 @@ String pno=et.getText().toString();
 
                 Length=lent.getText().toString();
                 Width=wid.getText().toString();
-                if(Length.length()==0&&Width.length()==0){
+                siz1 =siz.getText().toString();
+                shou1=shou.getText().toString();
+
+
+                if(Length.length()==0&&Width.length()==0&&siz1.length()==0&&shou1.length()==0){
                     et.setError("Empty!");
                 }else {
                     myRef2.child("Length").setValue(Length);
                     myRef2.child("Width").setValue(Width);
                     myRef2.child("Total").setValue(tot.getText().toString());
+                    myRef2.child("Shoulder").setValue(shou1);
+                    myRef2.child("Size").setValue(siz1);
                     ln.setVisibility(View.GONE);
                     Toast.makeText(Men.this, "Size Confirmed", Toast.LENGTH_SHORT).show();
                 }
