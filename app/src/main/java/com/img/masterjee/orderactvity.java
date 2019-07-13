@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class orderactvity extends AppCompatActivity {
-TextView design,phon,total,w,h,shldndr,szendr;
+TextView design,phon,total,w,h,shldndr,szendr,nameofuser,nameofph;
 ImageView im;
 
 Button btaa;
@@ -36,6 +36,10 @@ Button btn;
         w=findViewById(R.id.www);
         h=findViewById(R.id.lengt);
         btaa=findViewById(R.id.click);
+
+
+
+        nameofuser=findViewById(R.id.Nameeeeee);
 
         shldndr=findViewById(R.id.shhhhh);
         szendr=findViewById(R.id.siiiiii);
@@ -56,17 +60,25 @@ Button btn;
                 String tot = dataSnapshot.child("Total").getValue(String.class);
                 String wid = dataSnapshot.child("Width").getValue(String.class);
                 String len = dataSnapshot.child("Length").getValue(String.class);
+
+
+
                 String sio = dataSnapshot.child("Size").getValue(String.class);
                 String sho = dataSnapshot.child("Shoulder").getValue(String.class);
+                String n = dataSnapshot.child("Name").getValue(String.class);
+
+
 
                 phon.setText(ph);
                 design.setText(us);
                 total.setText(tot);
                 w.setText(wid);
                 h.setText(len);
+
+
                 szendr.setText(sio);
                 shldndr.setText(sho);
-
+                nameofuser.setText(n);
 
 
 
@@ -81,6 +93,11 @@ Button btn;
 
 
 
+
+
+
+
+
 btaa.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -92,7 +109,9 @@ btaa.setOnClickListener(new View.OnClickListener() {
         ordref.child("Width").setValue("");
         ordref.child("Length").setValue("");
         ordref.child("Total").setValue("");
-
+        ordref.child("Size").setValue("");
+        ordref.child("Shoulder").setValue("");
+        ordref.child("Name").setValue("");
     }
 });
 

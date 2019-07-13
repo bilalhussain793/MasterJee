@@ -30,7 +30,7 @@ public class tailordash extends AppCompatActivity {
     Button logout_btn;
     ImageView imv;
     String userphone,sizeofshirt,shoulderofshirt;
-    TextView nam,phon,ttp,shlder,sized;
+    TextView nam,phon,ttp,shlder,sized,nameeeeeee;
 
     TextView phn_order,design_order,pprice,width1,length1;
     Button order,myord;
@@ -47,7 +47,7 @@ String a,b;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tailordash);
         logout_btn=findViewById(R.id.logout);
-
+        nameeeeeee=findViewById(R.id.nnnnnn);
         shlder=findViewById(R.id.Sholdert);
         sized=findViewById(R.id.Sizet);
         myord=findViewById(R.id.Myorder);
@@ -136,7 +136,13 @@ String a,b;
             phn_order.setText(arrayList.get(i));
 
 
+
+
+                DatabaseReference nameof = database.getReference("users/"+arrayList.get(i));
+
+
                 DatabaseReference myRef4 = database.getReference("designs/"+arrayList.get(i));
+
                 myRef4.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
@@ -147,6 +153,9 @@ String a,b;
                         String l = dataSnapshot.child("Width").getValue(String.class);
                         String w = dataSnapshot.child("Length").getValue(String.class);
                         String si = dataSnapshot.child("Size").getValue(String.class);
+
+                        String nam = dataSnapshot.child("Name").getValue(String.class);
+
                         String sh = dataSnapshot.child("Shoulder").getValue(String.class);
 
                         design_order.setText(ds);
@@ -169,6 +178,24 @@ String a,b;
                 });
 
 
+
+                nameof.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // This method is called once with the initial value and again
+                        // whenever data at this location is updated.
+
+                        String us = dataSnapshot.child("Name").getValue(String.class);
+
+
+                        nameeeeeee.setText(us);
+
+                    }   public void onCancelled(DatabaseError error) {
+                        // Failed to read value
+                        Log.w("TAG", "Failed to read value.", error.toException());
+
+                    }
+                });
             }
         });
 
@@ -184,7 +211,9 @@ String a,b;
                 ordref.child("Length").setValue(length1.getText().toString());
                 ordref.child("Total").setValue(pprice.getText().toString());
 
-
+                ordref.child("Shoulder").setValue(shlder.getText().toString());
+                ordref.child("Size").setValue(sized.getText().toString());
+                ordref.child("Name").setValue(nameeeeeee.getText().toString());
 
 
 
