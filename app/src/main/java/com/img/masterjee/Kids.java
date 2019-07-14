@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Kids extends AppCompatActivity {
 
-    Button bt1,bt2,bt3,bt4,bt5,place,confirm;
+    Button bt1,bt2,bt3,bt4,bt5,place,confirm,f5;
     TextView selet,tot,cu;
     EditText et,lent,wid;
 
@@ -30,6 +30,7 @@ public class Kids extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kids);
         bt1=findViewById(R.id.b);
+        f5=findViewById(R.id.Fashion5);
         bt2=findViewById(R.id.design2);
         bt3=findViewById(R.id.design3);
         bt4=findViewById(R.id.design4);
@@ -127,7 +128,19 @@ public class Kids extends AppCompatActivity {
             }
         });
 
+        f5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myRef2.child("Kids Fashion5").setValue("Kids Fashion5");
+                cu.setText("9000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
 
+                selet.append("Kids Fashion5");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
 
         place.setOnClickListener(new View.OnClickListener() {
             @Override

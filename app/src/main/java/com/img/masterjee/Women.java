@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Women extends AppCompatActivity {
 
-    Button bt1,bt2,bt3,bt4,bt5,place,confirm;
+    Button bt1,bt2,bt3,bt4,bt5,place,confirm,f6;
     TextView selet,tot,cu;
     EditText et,lent,wid;
 
@@ -29,7 +29,7 @@ public class Women extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_women);
-
+f6=findViewById(R.id.w6);
         bt1=findViewById(R.id.b);
         bt2=findViewById(R.id.design2);
         bt3=findViewById(R.id.design3);
@@ -87,6 +87,27 @@ public class Women extends AppCompatActivity {
 
             }
         });
+
+        f6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Fashion6").setValue("Fashion6");
+                selet.append("Fashion6");
+                ln.setVisibility(View.VISIBLE);
+
+                cu.setText("6000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+
+
+
+            }
+        });
+
         bt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

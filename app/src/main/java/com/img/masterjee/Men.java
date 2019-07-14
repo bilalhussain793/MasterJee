@@ -15,6 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Men extends AppCompatActivity {
 Button bt1,bt2,bt3,bt4,bt5,place,confirm;
+
+Button fiv,si,seve,eigh,nin,te;
 TextView selet,tot,cu;
 EditText et,lent,wid,siz,shou;
 
@@ -32,6 +34,12 @@ String Length,Width,siz1,shou1 ;
         bt3=findViewById(R.id.design3);
         bt4=findViewById(R.id.design4);
         bt5=findViewById(R.id.design5);
+        fiv=findViewById(R.id.five);
+        si=findViewById(R.id.six);
+        seve=findViewById(R.id.seven);
+        eigh=findViewById(R.id.eight);
+        nin=findViewById(R.id.nine);
+        te=findViewById(R.id.ten);
 selet=findViewById(R.id.selected);
 et=findViewById(R.id.no);
 place=findViewById(R.id.cc);
@@ -137,6 +145,83 @@ ln.setVisibility(View.GONE);
             }
         });
 
+        si.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Design6").setValue("Design6");
+                cu.setText("7000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+                selet.append("Design6");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
+
+        seve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Design7").setValue("Design5");
+                cu.setText("9000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+                selet.append("Design7");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
+        eigh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Design8").setValue("Design5");
+                cu.setText("10000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+                selet.append("Design8");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
+        nin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Design9").setValue("Design9");
+                cu.setText("7000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+                selet.append("Design9");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
+
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                myRef2.child("Design10").setValue("Design10");
+                cu.setText("7000");
+                r=s+(Integer.parseInt(cu.getText().toString()));
+                s=r;
+                tot.setText(r+"");
+
+                selet.append("Design5");
+                ln.setVisibility(View.VISIBLE);
+            }
+        });
 
 
         place.setOnClickListener(new View.OnClickListener() {

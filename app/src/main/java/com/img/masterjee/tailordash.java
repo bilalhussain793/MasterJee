@@ -205,15 +205,23 @@ String a,b;
                String aa= design_order.getText().toString();
                String b=   phn_order.getText().toString();
                 DatabaseReference ordref = database.getReference("orders/" +a);
+
+
                 ordref.child("phn").setValue(b);
                 ordref.child("design").setValue(aa);
                 ordref.child("Width").setValue(width1.getText().toString());
                 ordref.child("Length").setValue(length1.getText().toString());
                 ordref.child("Total").setValue(pprice.getText().toString());
-
                 ordref.child("Shoulder").setValue(shlder.getText().toString());
                 ordref.child("Size").setValue(sized.getText().toString());
                 ordref.child("Name").setValue(nameeeeeee.getText().toString());
+
+
+
+                DatabaseReference accept = database.getReference("Accepted");
+
+                accept.setValue(b);
+
 
 
 

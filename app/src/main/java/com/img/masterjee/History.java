@@ -28,6 +28,8 @@ public class History extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 TextView de,w,h;
 Firebase firebase;
+    String value0;
+    TextView ordpend,ordappr;
     ListView lv;
     ArrayList<String> arrayList=new ArrayList<String>();
     ArrayAdapter<String> adapter;
@@ -43,7 +45,11 @@ Firebase firebase;
         Firebase.setAndroidContext(this);
 lv=findViewById(R.id.lissst);
 
+ordappr=findViewById(R.id.orderaccept);
+ordpend=findViewById(R.id.Pendind);
 
+
+ordappr.setVisibility(View.GONE);
 
 
         final SharedPreferences.Editor editor = getSharedPreferences("LOGIN", MODE_PRIVATE).edit();
@@ -140,6 +146,31 @@ lv=findViewById(R.id.lissst);
 
 
 
+        DatabaseReference accept = database.getReference("Accepted");
+        accept.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                 value0 = dataSnapshot.getValue(String.class);
+
+                if(value0.equals(aa)){
+
+                    ordappr.setVisibility(View.VISIBLE);
+                    ordpend.setVisibility(View.GONE);
+                }
+
+
+
+
+
+
+            }   public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("TAG", "Failed to read value.", error.toException());
+
+            }
+        });
 
 
 

@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-   android:orientation="vertical"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     tools:context=".Men">
 
-<LinearLayout
+
+
+
+    <LinearLayout
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:orientation="horizontal"
@@ -50,109 +52,274 @@
 
 
 
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-
-                android:id="@+id/b"
-                android:background="@drawable/d1"
-                android:layout_width="140dp"
-                android:layout_height="150dp" />
-            <TextView
-
-                android:layout_marginLeft="5dp"
-                android:text="Design 1\nPrice:1000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/design2"
-                android:background="@drawable/d2"
-                android:layout_width="140dp"
-                android:layout_height="150dp" />
-            <TextView
-
-                android:layout_marginLeft="5dp"
-                android:text="Design 2\nPrice:2000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
-
-<LinearLayout
-    android:layout_marginTop="20dp"
+<ScrollView
+    android:gravity="center"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:layout_height="wrap_content">
+    android:layout_height="400dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
     <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/design3"
-            android:background="@drawable/d3"
-            android:layout_width="140dp"
-            android:layout_height="150dp" />
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-            android:layout_marginLeft="5dp"
-            android:text="Design 3\nPrice:700"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+
+                    android:id="@+id/b"
+                    android:background="@drawable/d1"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 1\nPrice:1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design2"
+                    android:background="@drawable/d2"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 2\nPrice:2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design3"
+                    android:background="@drawable/d3"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 3\nPrice:700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design4"
+                    android:background="@drawable/d4"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design\nPrice:7000 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/five"
+                    android:background="@drawable/six"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 3\nPrice:700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/six"
+                    android:background="@drawable/seven"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design\nPrice:8000 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/seven"
+                    android:background="@drawable/eight"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 3\nPrice:700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/eight"
+                    android:background="@drawable/nine"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design\nPrice:8000 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/nine"
+                    android:background="@drawable/d3"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design 3\nPrice:700"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/ten"
+                    android:background="@drawable/d4"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Design\nPrice:8000 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/design4"
-            android:background="@drawable/d4"
-            android:layout_width="140dp"
-            android:layout_height="150dp" />
-        <TextView
+</ScrollView>
 
-            android:layout_marginLeft="5dp"
-            android:text="Design\nPrice:7000 "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
-    </LinearLayout>
-</LinearLayout>
+
+
 
     <LinearLayout
         android:visibility="gone"

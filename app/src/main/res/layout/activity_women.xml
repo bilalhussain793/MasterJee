@@ -37,38 +37,118 @@
 
 
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
-
-
         <LinearLayout
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
             android:layout_height="wrap_content">
 
-            <Button
 
-                android:id="@+id/b"
-                android:background="@drawable/w1"
-                android:layout_width="120dp"
-                android:layout_height="100dp" />
-            <TextView
-
-                android:layout_marginLeft="5dp"
-                android:text="Fashion 1"
+            <LinearLayout
+android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+
+                <Button
+
+                    android:id="@+id/b"
+                    android:background="@drawable/w1"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Fashion 1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design2"
+                    android:background="@drawable/w2"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Fashion 2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design3"
+                    android:background="@drawable/w3"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Fashion 3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/design4"
+                    android:background="@drawable/w4"
+                    android:layout_width="140dp"
+                    android:layout_height="150dp" />
+                <TextView
+
+                    android:layout_marginLeft="5dp"
+                    android:text="Fashion 4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
 
+
+        </LinearLayout>
         <LinearLayout
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -77,10 +157,10 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/design2"
+                android:id="@+id/w6"
                 android:background="@drawable/w2"
-                android:layout_width="120dp"
-                android:layout_height="100dp" />
+                android:layout_width="140dp"
+                android:layout_height="150dp" />
             <TextView
 
                 android:layout_marginLeft="5dp"
@@ -91,15 +171,8 @@
         </LinearLayout>
 
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:visibility="gone"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
             android:orientation="vertical"
@@ -107,61 +180,25 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/design3"
-                android:background="@drawable/w3"
-                android:layout_width="120dp"
+                android:id="@+id/design5"
+                android:background="@drawable/d1"
+                android:layout_width="wrap_content"
                 android:layout_height="100dp" />
             <TextView
 
                 android:layout_marginLeft="5dp"
-                android:text="Fashion 3"
+                android:text="Design "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/design4"
-                android:background="@drawable/w4"
-                android:layout_width="120dp"
-                android:layout_height="100dp" />
-            <TextView
-
-                android:layout_marginLeft="5dp"
-                android:text="Fashion 4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:visibility="gone"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/design5"
-            android:background="@drawable/d1"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp" />
-        <TextView
-
-            android:layout_marginLeft="5dp"
-            android:text="Design "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+</ScrollView>
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
